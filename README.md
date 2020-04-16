@@ -3,7 +3,7 @@
 >JSP와 Servlet에 대해 학습합니다.
 
 ## 실습
-* [헬로우월드 jsp 실습](https://seows2.github.io/-JSP-/WebContent/ch03/HelloWorld.html)
+* 헬로우월드 jsp 실습
 * [html파일과 CalServlet 파일 을 이용한 계산기](https://seows2.github.io/-JSP-/WebContent/ch04/calc.html) **깃헙 내에선 계산 불가능**
 
 
