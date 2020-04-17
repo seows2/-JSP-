@@ -7,6 +7,7 @@
 2. [html파일과 CalServlet 파일 을 이용한 계산기](https://seows2.github.io/-JSP-/WebContent/ch04/calc.html) **깃헙 내에선 계산 불가능**
 3. Sessoion 실습
 4. CounterServlet 실습 -> 속성(Attribute)를 binding한 객체의 scope내 정보공유
+5. 장바구니 실습 -> Session에 속성값을 바인딩
 
 
 ## 기술스택
