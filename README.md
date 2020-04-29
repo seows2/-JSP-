@@ -10,6 +10,8 @@
 5. 장바구니(서블릿) 실습 -> Session에 속성값을 바인딩
 6. Controller, View 실습 -> Request에 속성값을 바인딩
 7. 장바구니(JSP) 실습
+8. JSP Action 실습
+9. Beans 로그인 실습
 
 
 ## 기술스택
