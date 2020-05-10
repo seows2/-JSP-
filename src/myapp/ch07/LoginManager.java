@@ -6,6 +6,7 @@ public class LoginManager {
 			user.setEmail("alice@myserver.com");
 			return true;
 		} else {
+			user.setError("Invaild id/password");
 			return false;
 		}
 	}

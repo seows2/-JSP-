@@ -105,11 +105,13 @@ Scriptlet 내에 java code를 통해 특정 bean 객체 접근이 가능하지�
 <br>
 
 **JSP**
+
 ```jsp
 <jsp:useBean id="user" class="UserBean" scope="request"/>
 ```
 
 **Servlet**
+
 ```java
 UserBean user = (UserBean)request.getAttribute("user");
 // 해당 scope내에 UserBean이 이미 생성되어 관리되고 있으면 그 인스턴스 획득
@@ -139,6 +141,7 @@ User name id <%= user.getName() %>
 </body></html>
 ```
 => jsp안에 자바코드가 들어가는 것은 싫어!! jsp Bean을 사용하자!
+
 ```jsp
 <html><body>
 <jsp:useBean id="user" class="UserBean" scope="session"/>
@@ -149,6 +152,7 @@ User name is: <jsp:getProperty name="user" property="name"/>
 <br>
 
 **Bean 객체의 property 설정**
+
 ```jsp
 <jsp:setProperty name="bean id" property="property name" value="값"/>
 ```
@@ -182,17 +186,22 @@ VS. 아래는 session객체로부터 user라는 Attribute를 얻어오려함 하
 <input type="submit">
 </form>
 ```
+
 ```jsp
  <jsp:useBean id="user" class="UserBean" />
 <% user.setName(request.getParameter("name"));
 user.setPasswd(request.getParameter("passwd")); %>
 ```
+
 => 더 좋은 방법
+
 ```jsp
 <jsp:useBean id="user" class="UserBean" />
 <jsp:setProperty name="user" property="name" param="name" /> <jsp:setProperty name="user" property="passwd" param="passwd" />
 ```
+
 =>더더 좋은 방법
+
 ```jsp
  <jsp:useBean id="user" class="UserBean" />
  <jsp:setProperty name="user" property="name" />
@@ -200,7 +209,13 @@ user.setPasswd(request.getParameter("passwd")); %>
  <jsp:setProperty name="user" property="passwd" />
 ```
  => 더더더 좋은 방법
+ 
  ```jsp
  <jsp:useBean id="user" class="UserBean" />
  <jsp:setProperty name="user" property="*" />
  ```
+ 
+ ### MVC패턴
+ 
+ 
+ 
