@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class Login
@@ -42,6 +43,10 @@ public class Login extends HttpServlet {
 		userBean.setPasswd(request.getParameter("passwd"));
 		if(loginMgr.authenticate(userBean)) {
 			addr = "/ch07/login_success.jsp";
+			//ch09에 추가된 코드
+			HttpSession session = request.getSession();
+			session.setAttribute("user", userBean);
+			//여기까지
 		} else {
 			addr = "/ch07/login_fail.jsp";
 		}
