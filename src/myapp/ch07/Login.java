@@ -43,7 +43,7 @@ public class Login extends HttpServlet {
 		userBean.setPasswd(request.getParameter("passwd"));
 		if(loginMgr.authenticate(userBean)) {
 			addr = "/ch07/login_success.jsp";
-			//ch09에 추가된 코드
+			//ch09에 추가된 코드 여기부터
 			HttpSession session = request.getSession();
 			session.setAttribute("user", userBean);
 			//여기까지
